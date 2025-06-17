@@ -154,7 +154,7 @@ function clear_log(){
 function generate_token(){
 	var refresh = $('#refresh_token').val();
 
-	$.post('https://oauth2.googleapis.com/token', {client_id: '274055069602-58q9n9eeir21a3tg7ilv2s87485ph64j.apps.googleusercontent.com', client_secret: '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', refresh_token: refresh, grant_type:  'refresh_token'}, function(response){
+	$.post('https://oauth2.googleapis.com/token', {client_id: '461508733062-q4pp797krahs8a6dfu8fnslu20de74ib.apps.googleusercontent.com', client_secret: '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', refresh_token: refresh, grant_type:  'refresh_token'}, function(response){
 		// var response = JSON.parse(response);
 		$('#access_token').val(response['access_token']);
 	}).fail(function(e){
