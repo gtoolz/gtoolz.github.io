@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="card bg-light" id="add-domain">
 				<div class="card-body">
-					<div class="card-title font-weight-bold">Refresh Token : <a href="https://developers.google.com/oauthplayground/#step1&scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fwebmasters%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsiteverification&url=https%3A%2F%2F&content_type=application%2Fjson&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fv2%2Fauth&oauthTokenEndpointValue=https%3A%2F%2Foauth2.googleapis.com%2Ftoken&oauthClientId=461508733062-q4pp797krahs8a6dfu8fnslu20de74ib.apps.googleusercontent.com&oauthClientSecret=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&includeCredentials=checked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&prompt=consent&response_type=code&wrapLines=on" target="_blank">Get it!</a></div>
+					<div class="card-title font-weight-bold">Refresh Token : <a href="https://developers.google.com/oauthplayground/#step1&scopes=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fwebmasters%2Chttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fsiteverification&url=https%3A%2F%2F&content_type=application%2Fjson&http_method=GET&useDefaultOauthCred=checked&oauthEndpointSelect=Google&oauthAuthEndpointValue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fv2%2Fauth&oauthTokenEndpointValue=https%3A%2F%2Foauth2.googleapis.com%2Ftoken&oauthClientId=12279730068-c6lqnplc2fku9h1vpbsnv5mouhcva3if.apps.googleusercontent.com&oauthClientSecret=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&includeCredentials=checked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&prompt=consent&response_type=code&wrapLines=on" target="_blank">Get it!</a></div>
 					<div class="input-group mb-3">
 						<input type="text" id="refresh_token" class="form-control" placeholder="1//04gfKOj9G-LkvCgYIARAAGAQSNwF-L9IrsM9zA0S-4DdXldsonWI4pfUjQItgNxjoVlFvPlDz4LIDLKYk3gyoVp4uGi0JahQB1ys" aria-label="Refresh token" aria-describedby="generate">
 						<div class="input-group-append">
@@ -154,7 +154,7 @@ function clear_log(){
 function generate_token(){
 	var refresh = $('#refresh_token').val();
 
-	$.post('https://oauth2.googleapis.com/token', {client_id: '461508733062-q4pp797krahs8a6dfu8fnslu20de74ib.apps.googleusercontent.com', client_secret: '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', refresh_token: refresh, grant_type:  'refresh_token'}, function(response){
+	$.post('https://oauth2.googleapis.com/token', {client_id: '12279730068-c6lqnplc2fku9h1vpbsnv5mouhcva3if.apps.googleusercontent.com', client_secret: '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', refresh_token: refresh, grant_type:  'refresh_token'}, function(response){
 		// var response = JSON.parse(response);
 		$('#access_token').val(response['access_token']);
 	}).fail(function(e){
